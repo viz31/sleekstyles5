@@ -1,0 +1,237 @@
+/* navigation */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 15px gray;
+    z-index: 1000;
+}
+#logo{
+    height: 40px;
+    width: auto;
+    margin-left: 8%;
+}
+.navButton{
+    margin-left: 5%;
+}
+.navbar a{
+    color: rgb(235, 91, 91);
+    padding: 10px 14px;
+    font-size: 21px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.navbar a:hover{
+    background-color: rgb(235, 91, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* bag */
+.bag{
+    margin-left: 500px;  
+}
+.bag svg{
+    height: 25px;
+}
+.bag a{
+    padding: 10px 20px !important;
+}
+
+/* bag */
+.bag{
+    margin-left: 500px;  
+}
+.bag svg{
+    height: 25px;
+}
+.bag a{
+    padding: 10px 20px !important;
+}
+
+/* content */
+
+body{
+    font-family: monospace;
+}
+
+/* Item details */
+img{
+    height: 300px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+[class*="item"]{
+    display: inline-block;
+    height: 480px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 10%;
+}
+[class*="item"]:hover{
+    box-shadow: 0px 10px 15px gray;
+}
+.details h3{
+    margin: 0px;
+    padding: 0px;
+    font-weight: lighter;
+    margin-left: 10px;
+}
+.details h4 {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding: 0;
+    margin-top: 5px;
+}
+.details p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.details s {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: line-through;
+}
+.details h5 {
+    display: inline-block;
+    color: rgb(247, 67, 67);
+    margin: 0;
+    font-weight: bolder;
+}
+.details h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+
+.cart{
+    background-color: rgb(235, 91, 91);
+    color: white;
+    height: 35px;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.cart:hover{
+    background-color: rgb(236, 57, 57);
+    font-weight: bolder;
+}
+.cart svg{
+    height: 15px;
+    margin: 0px;  
+}
+
+
+
+/* cart page */
+.deleteCart{
+    background-color: rgb(235, 91, 91);
+    color: white;
+    height: 35px;
+    border: none;
+   
+    margin: 0 auto;
+   
+        
+    font-size: 15px;
+    display: block;
+    /* margin-top: 200px; */
+    border-radius: 5px;
+    width: 200px;
+}
+.deleteCart:hover{
+    background-color: rgb(236, 57, 57);
+    font-weight: bolder;
+}
+
+.cartContent{
+    /* display: flex; */
+    margin-top: 110px;
+}
+
+
+
+
+/* Bag */
+.cart-Details {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    box-shadow: 0px 5px 10px gray;
+}
+.cart-Details img {
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+    object-fit: cover; 
+}
+.cart-Details h2{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+.cart-Details h3{
+    margin-left: 10px;
+    font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cart-Details h4{
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.cart-Details p{
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: bolder;
+    
+}
+  
+#size{
+    margin: 10px;
+    background-color: rgb(221, 218, 218);
+    border: none;
+    font-weight: bolder;
+    padding: 2px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* footer CSS */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bolder;
+  }
