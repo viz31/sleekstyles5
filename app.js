@@ -1,67 +1,32 @@
-console.log('printing details');
-//const { response } = require("express");
-var express = require("express");
-var app = express();
+const express = require('express');
+const path = require('path');
+const app = express();
 
-app.use(express.static('public'))
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
-    res.render(__dirname + '/views/index.ejs');
-    
+    res.render('index');
 });
 
-app.get('/views/index.ejs', (req, res) => {
-    res.render(__dirname + '/views/index.ejs');
+app.get('/bag', (req, res) => {
+    res.render('bag');
 });
 
-app.get('/views/index.ejs#men', (req, res) => {
-    res.render(__dirname + '/views/index.ejs#men');
-});
-
-app.get('/views/index.ejs#women', (req, res) => {
-    res.render(__dirname + '/views/index.ejs#women');
-});
-
-app.get('/views/bag.ejs', (req, res) => {
-    res.render(__dirname + '/views/bag.ejs');
-});
-
-
-app.get("/category/:gender/:product", (req, res) => {
+app.get('/category/:gender/:product', (req, res) => {
     const val = req.params.gender;
-    if(val === "male"){
-        const p = req.params.product
-        if (p == "shirt"){
-            res.render(__dirname + '/views/menShirt.ejs');
-        }
-        else if (p == "jacket"){
-            res.render(__dirname + '/views/menJacket.ejs');
-        }
-    } else if(val === "female"){
-        const p = req.params.product
-        if (p == "shirt"){
-            res.render(__dirname + '/views/womenShirt.ejs');
-        }
-        else if (p == "jacket"){
-            res.render(__dirname + '/views/womenJacket.ejs');
-        }
+    const p = req.params.product;
+    if (val === 'male') {
+        if (p === 'shirt') res.render('menShirt');
+        else if (p === 'jacket') res.render('menJacket');
+    } else if (val === 'female') {
+        if (p === 'shirt') res.render('womenShirt');
+        else if (p === 'jacket') res.render('womenJacket');
     }
-})
-
-// app.listen(3000, ()=>{
-//     console.log(`listening at port 3000..`)
-// })
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`listening at port ${port}..`);
+    console.log('listening at port ' + port);
 });
-
-
-
-
-
-
-
-
-
-
