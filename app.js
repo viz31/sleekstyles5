@@ -1,11 +1,7 @@
-
-
-
 console.log('printing details');
 //const { response } = require("express");
 var express = require("express");
 var app = express();
-const port = 3000;
 
 app.use(express.static('public'))
 app.get('/', (req, res) => {
