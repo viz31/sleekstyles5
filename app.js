@@ -2,7 +2,7 @@
 
 
 console.log('printing details');
-const { response } = require("express");
+//const { response } = require("express");
 var express = require("express");
 var app = express();
 const port = 3000;
@@ -51,9 +51,14 @@ app.get("/category/:gender/:product", (req, res) => {
     }
 })
 
-app.listen(3000, ()=>{
-    console.log(`listening at port 3000..`)
-})
+// app.listen(3000, ()=>{
+//     console.log(`listening at port 3000..`)
+// })
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`listening at port ${port}..`);
+});
 
 
 
